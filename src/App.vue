@@ -3,20 +3,25 @@
     <h2>FilterableTodos (normal Vue component)</h2>
     <FilterableTodos :todos="todos" :filter="filter"/>
 
-    <h2>FilterableTodosFunctional (functional Vue component)</h2>
+    <h2>FilterableTodosFunctional (functional Vue component with render function)</h2>
     <FilterableTodosFunctional :todos="todos" :filter="filter"/>
+
+    <h2>FilterableTodosFunctionalTemplate (functional Vue component with template)</h2>
+    <FilterableTodosFunctionalTemplate :todos="todos" :filter="filter"/>
   </div>
 </template>
 
 <script>
 import FilterableTodos from "./components/FilterableTodos";
 import FilterableTodosFunctional from "./components/FilterableTodosFunctional";
+import FilterableTodosFunctionalTemplate from "./components/FilterableTodosFunctionalTemplate";
 
 export default {
   name: "App",
   components: {
     FilterableTodos,
-    FilterableTodosFunctional
+    FilterableTodosFunctional,
+    FilterableTodosFunctionalTemplate
   },
   data: () => ({
     filter: "active",
